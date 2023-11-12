@@ -1,0 +1,9 @@
+#! /bin/bash
+
+# Autostart Programs
+polybar bar1 &
+nitrogen --restore
+picom &
+dunst &
+udiskie &
+/usr/lib/polkit-gnome/polkit-gnome-authenticatio-agent-1
