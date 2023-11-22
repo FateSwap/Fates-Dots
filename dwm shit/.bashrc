@@ -16,13 +16,13 @@ alias dwm-perm-config-atom="cd ~/.suckless/dwm && sudo atom config.def.h && cd ~
 alias dwm-dir="cd ~/.suckless/dwm"
 
 # st
-alias st-rebuild="cd ~/.suckless/st && rm config.h && sudo make clean install && cd ~/"
-alias st-tmp-config-atom="cd ~/.suckless/st && sudo atom config.h && cd ~/"
-alias st-tmp-config="cd ~/.suckless/st && sudo vim config.h && cd ~/"
-alias st-config-apply="cd ~/.suckless/st && sudo config.h config.def.h"
-alias st-perm-config="cd ~/.suckless/st && sudo vim config.def.h && cd ~/"
-alias st-perm-config-atom="cd ~/.suckless/st && sudo atom config.def.h && cd ~/"
-alias st-dir="cd ~/.suckless/st"
+alias st-rebuild="cd ~/.suckless/st-flexipatch && rm config.h && sudo make clean install && cd ~/"
+alias st-tmp-config-atom="cd ~/.suckless/st-flexipatch && sudo atom config.h && cd ~/"
+alias st-tmp-config="cd ~/.suckless/st-flexipatch && sudo vim config.h && cd ~/"
+alias st-config-apply="cd ~/.suckless/st-flexipatch && sudo config.h config.def.h"
+alias st-perm-config="cd ~/.suckless/st-flexipatch && sudo vim config.def.h && cd ~/"
+alias st-perm-config-atom="cd ~/.suckless/st-flexipatch && sudo atom config.def.h && cd ~/"
+alias st-dir="cd ~/.suckless/st-flexipatch"
 
 # dmenu
 alias dmenu-rebuild="cd ~/.suckless/dmenu && rm config.h && sudo make clean indmenuall && cd ~/"
