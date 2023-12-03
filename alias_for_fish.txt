@@ -1,0 +1,58 @@
+#
+# dwm
+#
+alias -s dwm-rebuild="cd ~/.suckless/dwm && rm config.h && sudo make clean install && cd ~/"
+alias -s dwm-tmp-config-atom="cd ~/.suckless/dwm && sudo atom config.h && cd ~/"
+alias -s dwm-tmp-config="cd ~/.suckless/dwm && sudo vim config.h && cd ~/"
+alias -s dwm-config-apply="cd ~/.suckless/dwm && sudo config.h config.def.h"
+alias -s dwm-perm-config="cd ~/.suckless/dwm && sudo vim config.def.h && cd ~/"
+alias -s dwm-perm-config-atom="cd ~/.suckless/dwm && sudo atom config.def.h && cd ~/"
+alias -s dwm-dir="cd ~/.suckless/dwm"
+
+#
+# st
+#
+alias -s st-rebuild="cd ~/.suckless/st-flexipatch && rm config.h && sudo make clean install && cd ~/"
+alias -s st-tmp-config-atom="cd ~/.suckless/st-flexipatch && sudo atom config.h && cd ~/"
+alias -s st-tmp-config="cd ~/.suckless/st-flexipatch && sudo vim config.h && cd ~/"
+alias -s st-config-apply="cd ~/.suckless/st-flexipatch && sudo config.h config.def.h"
+alias -s st-perm-config="cd ~/.suckless/st-flexipatch && sudo vim config.def.h && cd ~/"
+alias -s st-perm-config-atom="cd ~/.suckless/st-flexipatch && sudo atom config.def.h && cd ~/"
+alias -s st-dir="cd ~/.suckless/st-flexipatch"
+
+#
+# dmenu
+#
+alias -s dmenu-rebuild="cd ~/.suckless/dmenu && rm config.h && sudo make clean indmenuall && cd ~/"
+alias -s dmenu-tmp-config-atom="cd ~/.suckless/dmenu && sudo atom config.h && cd ~/"
+alias -s dmenu-tmp-config="cd ~/.suckless/dmenu && sudo vim config.h && cd ~/"
+alias -s dmenu-config-apply="cd ~/.suckless/dmenu && sudo config.h config.def.h"
+alias -s dmenu-perm-config="cd ~/.suckless/dmenu && sudo vim config.def.h && cd ~/"
+alias -s dmenu-perm-config-atom="cd ~/.suckless/dmenu && sudo atom config.def.h && cd ~/"
+alias -s dmenu-dir="cd ~/.suckless/dmenu"
+
+#
+# slstatus
+#
+alias -s slstatus-rebuild="cd ~/.suckless/slstatus && rm config.h && sudo make clean inslstatusall && cd ~/"
+alias -s slstatus-tmp-config-atom="cd ~/.suckless/slstatus && sudo atom config.h && cd ~/"
+alias -s slstatus-tmp-config="cd ~/.suckless/slstatus && sudo vim config.h && cd ~/"
+alias -s slstatus-config-apply="cd ~/.suckless/slstatus && sudo config.h config.def.h"
+alias -s slstatus-perm-config="cd ~/.suckless/slstatus && sudo vim config.def.h && cd ~/"
+alias -s slstatus-perm-config-atom="cd ~/.suckless/slstatus && sudo atom config.def.h && cd ~/"
+alias -s slstatus-dir="cd ~/.suckless/slstatus"
+
+#
+# other
+#
+alias -s Curse_Of_Ra="sudo shutdown -h now"
+alias -s h="cd ~/"
+alias -s c="cd ~/.config"
+alias -s cl="clear"
+alias -s b="btop"
+alias -s pf="pfetch"
+alias -s nf="neofetch"
+alias -s v="cd ~/Void"
+alias -s fu="fuzzypkg"
+alias -s gc="git clone "
+alias -s Revive="sudo reboot"
