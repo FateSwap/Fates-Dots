@@ -8,18 +8,32 @@ sh /$HOME/.config/bspwm/autostart
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
+#
+# Decor
+#
 bspc config border_radius        12
 bspc config border_width         3
 bspc config window_gap          12
-bspc config focused_border_color \#D44340
-bspc config normal_border_color \#191919
+
+#
+# Colors
+#
+
+# Gruvbox-Dark-Hard
+bspc config focused_border_color \#FAF5D7
+# Red
+# bspc config normal_border_color \#191919
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+#
+# Rules
+# 
+
+# bspc rule -a is used to create rules
+# Example: bspc rule -a Gimp desktop='^8' state=floating follow=on focus=off
+# See more at https://github.com/baskerville/bspwm/wiki/Command-Syntax-Rewrite#rule-command
+
+# bspc rule -a brave desktop=^9 
