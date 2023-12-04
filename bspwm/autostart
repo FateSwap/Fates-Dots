@@ -3,7 +3,8 @@
 # Autostart Programs
 polybar bar1 &
 nitrogen --restore
-picom &
-dunst &
+# picom &
+# dunst &
 udiskie &
-/usr/lib/polkit-gnome/polkit-gnome-authenticatio-agent-1
+# espanso start --unmanaged &
+# exec=/usr/lib/polkit-gnome/polkit-gnome-authenticatio-agent-1
