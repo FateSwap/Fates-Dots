@@ -43,7 +43,7 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,s,f}
+super + {t,shift + f,s,t}
 	bspc node -t {tiled,floating}
 
 # set the node flags
@@ -145,3 +145,13 @@ XF86AudioMicMute
 #
 Print
 	maim -s ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
+
+
+
+
+
+
+
+
+
+
