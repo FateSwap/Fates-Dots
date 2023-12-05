@@ -43,8 +43,8 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,s,f} 
-	bspc node -t {tiled,floating} 
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,floating}
 
 # set the node flags
 super + ctrl + {m,x,y,z}
@@ -55,7 +55,7 @@ super + ctrl + {m,x,y,z}
 #
 
 # focus the node in the given direction
-super + {_,shift + }{Left,Down,Up,Right} 
+super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
@@ -125,7 +125,7 @@ super + {Left,Down,Up,Right}
 #
 
 # rasie volume by 5%
-XF86AudioRaiseVolume 
+XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 # lower volume by 5%
@@ -133,11 +133,15 @@ XF86AudioLowerVolume
 	pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 # mute volume
-XF86AudioMute	
+XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # mute mic
 XF86AudioMicMute
 	pactl set-source-mute 0 toggle
 
-
+#
+# other
+#
+Print
+	maim -s ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
