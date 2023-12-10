@@ -4,6 +4,10 @@
 
 # terminal emulator
 super + Return
+	alacritty
+
+# terminal backup
+super + shift + Return
 	kitty
 
 # program launcher
