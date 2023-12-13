@@ -150,7 +150,8 @@ XF86AudioMicMute
 Print
 	maim -s ~/Pictures/Screenshots/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
 
-
+super + l
+	betterlockscreen --lock dim
 
 
 
