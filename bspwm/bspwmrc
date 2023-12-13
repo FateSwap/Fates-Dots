@@ -21,6 +21,10 @@ bspc config window_gap          12
 
 # Gruvbox-Dark-Hard
 bspc config focused_border_color \#FAF5D7
+
+# Dracula
+# bspc config focused_border_color \#BD93F9
+
 # Red
 # bspc config normal_border_color \#191919
 
