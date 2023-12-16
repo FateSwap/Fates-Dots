@@ -134,7 +134,8 @@
   
   # Steam
   programs.steam.enable = true;
-
+  hardware.enableRedistributableFirmware = true;
+  
   # GTK Theme (WIP)
  
   # Allow unfree packages
@@ -188,9 +189,9 @@
       wofi
       waybar
     # bspwm
-      bspwm
-      sxhkd
-      polybar
+     # bspwm
+     # sxhkd
+     # polybar
 
   # WM/DE Utilities
     swww
