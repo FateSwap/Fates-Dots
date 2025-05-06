@@ -48,6 +48,15 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  # Autoupdate/upgrade
+  system.autoUpgrade = {
+        enable = true;
+        dates = "04:00";
+  };
+
+  # Enable preload
+  services.preload.enable = true;
+  
   # Xserver (contains anything X11)
   services.xserver = {
     enable = true;
@@ -181,12 +190,6 @@
   # Flatpak install/enable
   services.flatpak.enable = true;
 
-  # Autoupdate/upgrade
-  system.autoUpgrade = {
-        enable = true;
-        dates = "04:00";
-    };
-
   # Main place to install apps
   environment = { 
     systemPackages = with pkgs; [
@@ -219,6 +222,7 @@
     gnome-extension-manager
     gnome-software # For flatpaks
     alacarte
+    lm_sensors # For freon
 
     # Xfce Extras
     # xfce.xfce4-panel
