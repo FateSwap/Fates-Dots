@@ -1,0 +1,31 @@
+# Collection of notes that should hopefully build over time 
+# Will be stored in my github repo at https://github.com/FateSwap/Fates-Dots
+
+    # Bash Scripting
+        # Used to check if a PROGRAM is installed
+        if ! command -v PROGRAM 2>&1 >/dev/null 
+        then
+            echo "PROGRAM could not be found or is not installed "
+            exit 1
+        fi
+        #########################################
+
+        # Bash if statements | can be nested
+        if [ condition ]; then
+            command
+        else
+            command
+        fi
+        #########################################
+
+    # Vim/Nvim 
+        # Create file in vim :Ex (vim file explorer) | might be useable elsewhere
+        :!touch FILENAME
+
+        # Vim file explorer
+        :Ex
+
+        # TonyBanters repo for nvim binds
+        https://github.com/tonybanters/Nvim
+
+    # 
