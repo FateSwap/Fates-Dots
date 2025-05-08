@@ -47,6 +47,7 @@ gnome-extensions enable "impatience@gfxmonk.net"
 gnome-extensions enable "just-perfection-desktop@just-perfection"
 gnome-extensions enable "mediacontrols@cliffniff.github.com"
 gnome-extensions enable "top-bar-organizer@julian.gse.jsts.xyz"
+gnome-extensions enable "quick-settings-avatar@d-go"
 
 # Adds flathub to flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo

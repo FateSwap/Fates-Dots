@@ -233,8 +233,13 @@
   nixpkgs.config.allowUnfree = true;
 
   # Steam install/nable
-  programs.steam.enable = true; 
-
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = false; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = false; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = false; # Open ports in the firewall for Steam Local Network Game Transfers
+  };
+    
   # Flatpak install/enable
   services.flatpak.enable = true;
 
@@ -260,6 +265,7 @@
     neovim
     figlet
     pfetch
+    tealdeer
     pciutils
     neofetch
     asciiquarium
@@ -289,8 +295,7 @@
             gnomeExtensions.media-controls
             gnomeExtensions.top-bar-organizer
             gnomeExtensions.appindicator
-            #gnomeExtensions.custom-accent-colors
-            #gnomeExtensions.rounded-window-corners-reborn
+            gnomeExtensions.user-avatar-in-quick-settings
 
     # Xfce Extras
     # xfce.xfce4-panel
