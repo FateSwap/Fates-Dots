@@ -1,30 +1,37 @@
 #! /usr/bin/env sh
 
-# Make Void
-#cd ~ && mkdir Void && cd Void && mkdir Git && cd Git
+# This script is designed to be run on NixOS with MY extension-list seen in my config
 
-# Clone my repo
-#git clone https://github.com/FateSwap/Fates-Dots
+# Variables
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+# Makes the void and git directories
+if [ ! -d ~/Void/Git/ ]; then
+    echo "Creating Void..."
+    mkdir -p ~/Void/Git/
+else
+    echo "Void already exists | Continuing..."
+fi
 
 # cp configs to correct area
-#cp -r ~/Void/Git/Fates-Dots/nvim ~/.config/
-#cp -r ~/Void/Git/Fates-Dots/fish ~/.config/
-#cp -r ~/Void/Git/Fates-Dots/alacritty ~/.config/
-#cp -r ~/Void/Git/Fates-Dots/hypr ~/.config/
-#cp -r ~/Void/Git/Fates-Dots/bspwm ~/.config/
-#cp -r ~/Void/Git/Fates-Dots/sxhkd ~/.config/
-#cp -r ~/Void/Git/Fates-Dots/kitty ~/.config/
+cp -r /nvim/ ~/.config/
+cp -r /fish/ ~/.config/
+cp -r /alacritty/ ~/.config/
+cp -r /hypr/ ~/.config/
+cp -r /bspwm/ ~/.config/
+cp -r /sxhkd/ ~/.config/
+cp -r /kitty/ ~/.config/
 
 # Sets theme to dark
-#gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 # Wallpapers
-#mkdir ~/Void/Git/Walls/ && cd ~/Void/Git/Walls && git clone https://github.com/FrenzyExists/Wallpapers 
+./wallpapers.sh
 
 # Sets wallpaper in GNOME SPECIFICALLY
-#gsettings set org.gnome.desktop.background picture-uri file:///home/spaceman/Void/Git/Walls/Wallpapers/Anime/lo-fi-sailor-moon.gif
+gsettings set org.gnome.desktop.background picture-uri file:///home/spaceman/Void/Git/Walls/Wallpapers/Anime/lo-fi-sailor-moon.gif
 
-# Enable GNOME extensions
+# Enables MY GNOME extensions | unless you already have all of these installed don't uncomment
 #gnome-extensions enable "user-theme@gnome-shell-extensions.gcampax.github.com"
 #gnome-extensions enable "blur-my-shell@aunetx"
 #gnome-extensions enable "desktop-cube@schneegans.github.com"
@@ -42,10 +49,10 @@
 #gnome-extensions enable "top-bar-organizer@julian.gse.jsts.xyz"
 
 # Adds flathub to flatpak
-#flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# Bring back to home
-cd ~
+# Script done
+exit 1
 
 
 
