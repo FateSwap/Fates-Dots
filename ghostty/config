@@ -1,0 +1,17 @@
+# Sets font size
+font-size = 12
+
+# Sets font-family
+font-family = "Hermit"
+font-family-bold = "Hermit Bold"
+font-family-italic = "Hermit Italic"
+font-family-bold-italic = "Hermit Bold Italic"
+
+# Sets font color-space (native, linear, or linear-corrected)
+alpha-blending = native
+
+# Sets cursor-style
+cursor-style = bar
+
+# Sets theme
+#theme =
