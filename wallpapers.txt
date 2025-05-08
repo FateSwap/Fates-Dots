@@ -1,9 +1,0 @@
-# Use
-
-https://github.com/FrenzyExists/wallpapers
-
-https://github.com/AngelJumbo/gruvbox-wallpapers
-
-https://github.com/dracula/wallpaper.git
-
-# Clone them all to wallpaper folder
