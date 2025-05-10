@@ -32,9 +32,9 @@ else
       mkdir -p ~/Void/Git/Walls/
       echo -e "\nDirectories has been created | Continuing..."
       # Clones wallpaper repos
-      #cd ~/Void/Git/Goob/ && git clone https://github.com/FrenzyExists/wallpapers
-      cd ~/Void/Git/Goob/ && git clone https://github.com/AngelJumbo/gruvbox-wallpapers
-      cd ~/Void/Git/Goob/ && git clone https://github.com/dracula/wallpaper.git
+      cd ~/Void/Git/Walls/ && git clone https://github.com/FrenzyExists/wallpapers
+      cd ~/Void/Git/Walls/ && git clone https://github.com/AngelJumbo/gruvbox-wallpapers
+      cd ~/Void/Git/Walls/ && git clone https://github.com/dracula/wallpaper.git
       figlet Done
       echo "Wallpapers have been cloned | All walls at  ~/Void/Git/Walls/"
   else
