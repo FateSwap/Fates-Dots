@@ -19,7 +19,7 @@ fi
 if [ -d ~/Void/Git/Walls/ ]; then
   echo "Walls directory exists. Script continuing"
   # Clones wallpaper repos
-  #cd ~/Void/Git/Walls/ && git clone https://github.com/FrenzyExists/wallpapers
+  cd ~/Void/Git/Walls/ && git clone https://github.com/FrenzyExists/wallpapers
   cd ~/Void/Git/Walls/ && git clone https://github.com/AngelJumbo/gruvbox-wallpapers
   cd ~/Void/Git/Walls/ && git clone https://github.com/dracula/wallpaper.git
   figlet Done
