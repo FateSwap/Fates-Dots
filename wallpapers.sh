@@ -18,6 +18,12 @@ fi
 # Also checks if user wants to create it | taken from https://www.geeksforgeeks.org/bash-script-read-user-input/ & https://unix.stackexchange.com/questions/47584/in-a-bash-script-using-the-conditional-or-in-an-if-statement#47585
 if [ -d ~/Void/Git/Walls/ ]; then
   echo "Walls directory exists. Script continuing"
+  # Clones wallpaper repos
+  #cd ~/Void/Git/Walls/ && git clone https://github.com/FrenzyExists/wallpapers
+  cd ~/Void/Git/Walls/ && git clone https://github.com/AngelJumbo/gruvbox-wallpapers
+  cd ~/Void/Git/Walls/ && git clone https://github.com/dracula/wallpaper.git
+  figlet Done
+  echo "Wallpapers have been cloned | All walls at  ~/Void/Git/Walls/"
 else
   read -p "Directory doesn't exist. Would you like to create it? ~/Void/Git/Walls/: " choice
   if [[ "$choice" == "y" || "$choice" == "Y" || "$choice" == "Yes" || "$choice" == "yes" ]]; then
@@ -26,7 +32,7 @@ else
       mkdir -p ~/Void/Git/Walls/
       echo -e "\nDirectories has been created | Continuing..."
       # Clones wallpaper repos
-      cd ~/Void/Git/Goob/ && git clone https://github.com/FrenzyExists/wallpapers
+      #cd ~/Void/Git/Goob/ && git clone https://github.com/FrenzyExists/wallpapers
       cd ~/Void/Git/Goob/ && git clone https://github.com/AngelJumbo/gruvbox-wallpapers
       cd ~/Void/Git/Goob/ && git clone https://github.com/dracula/wallpaper.git
       figlet Done
