@@ -47,6 +47,11 @@
 
     # 
 
+    # Fish Shell
+        # Change theme using .theme file
+        fish_config theme save "THEMENAME"
+    #
+
     # Nix/Nixos
         # Nix overrides for custom package source
         environment.systemPackages  = [
