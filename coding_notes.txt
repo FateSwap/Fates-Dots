@@ -16,6 +16,23 @@
         else
             command
         fi
+
+            # Bash if directory exists
+            if [ -d /path/to/directory ]; then
+                echo "Directory exists."
+            else
+                echo "Directory doesn't exist."
+            fi
+
+            # Bash if directory doesnt exist
+            if [ ! -d /path/to/directory ]; then
+                echo "Directory doesn't exist."
+            else
+                echo "Directory exists."
+            fi
+            # More info available at https://linuxsimply.com/bash-scripting-tutorial/conditional-statements/if/check-if-directory-exists/
+
+        # NEXT
         #########################################
 
     # Vim/Nvim 
@@ -29,3 +46,23 @@
         https://github.com/tonybanters/Nvim
 
     # 
+
+    # Nix/Nixos
+        # Nix overrides for custom package source
+        environment.systemPackages  = [
+          (pkgs.emacs.overrideAttrs (oldAttrs: {
+            name = "emacs-25.0-pre";
+            src = /path/to/my/emacs/tree;
+          }))
+        ];
+        # This allows for custom packages versions | There should be way to have it pull from github for source
+
+        # Make Nix override global | any programs that depend on package will use custom instead
+        # From https://nlewo.github.io/nixos-manual-sphinx/configuration/customizing-packages.xml.html 
+
+
+
+
+
+
+
