@@ -13,5 +13,8 @@ alpha-blending = native
 # Sets cursor-style
 cursor-style = bar
 
+# Sets opacity
+background-opacity = 0.95
+
 # Sets theme
-#theme =
+# theme =
