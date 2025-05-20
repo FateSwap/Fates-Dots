@@ -14,13 +14,15 @@ else
 fi
 
 # cp configs to correct area
-cp -r /nvim/ ~/.config/
-cp -r /fish/ ~/.config/
-cp -r /alacritty/ ~/.config/
-cp -r /hypr/ ~/.config/
-cp -r /bspwm/ ~/.config/
-cp -r /sxhkd/ ~/.config/
-cp -r /kitty/ ~/.config/
+cp -r ~/Void/Git/Fates-Dots/nvim/ ~/.config/
+cp -r ~/Void/Git/Fates-Dots/fish/ ~/.config/
+cp -r ~/Void/Git/Fates-Dots/alacritty/ ~/.config/
+cp -r ~/Void/Git/Fates-Dots/hypr/ ~/.config/
+cp -r ~/Void/Git/Fates-Dots/bspwm/ ~/.config/
+cp -r ~/Void/Git/Fates-Dots/sxhkd/ ~/.config/
+cp -r ~/Void/Git/Fates-Dots/kitty/ ~/.config/
+cp -r ~/Void/Git/Fates-Dots/picom/ ~/.config/
+mv ~/Void/Git/Fates-Dots/suckless/ ~/.suckless/
 
 # Sets theme to dark
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
