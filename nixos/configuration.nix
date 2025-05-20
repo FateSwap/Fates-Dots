@@ -21,7 +21,7 @@
   };
 
   # Sets hostname
-  networking.hostName = "Omenking-NixOS"; # Define your hostname.
+  networking.hostName = "PanasonicSV9-NixOS"; # Define your hostname.
   
   # Enable networkManager and fireWall 
   networking.networkmanager.enable = true;
@@ -43,61 +43,7 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-
-  # Nvidia stuff 
-
-  # Enable OpenGL
-  hardware.graphics = {
-    enable = true;
-  };
-
-  # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
-
-  hardware.nvidia = {
-
-    # Modesetting is required.
-    modesetting.enable = true;
-
-    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
-    # Enable this if you have graphical corruption issues or application crashes after waking
-    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
-    # of just the bare essentials.
-    powerManagement.enable = false;
-
-    # Fine-grained power management. Turns off GPU when not in use.
-    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
-    powerManagement.finegrained = false;
-
-    # Use the NVidia open source kernel module (not to be confused with the
-    # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of 
-    # supported GPUs is at: 
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
-    # Only available from driver 515.43.04+
-    open = false;
-
-    # Enable the Nvidia settings menu,
-	# accessible via `nvidia-settings`.
-    nvidiaSettings = true;
-
-    # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };
-
-  hardware.nvidia.prime = { # specific to laptop with nvidia and intel 
-		offload = {
-			enable = true;
-			enableOffloadCmd = true;
-		};
-		# Make sure to use the correct Bus ID values for your system!
-		intelBusId = "PCI:0:2:0";
-		nvidiaBusId = "PCI:1:0:0";
-                # amdgpuBusId = "PCI:54:0:0"; For AMD GPU
-  };
-
-  # End of nvidia stuff
-
+  
   # Autoupdate/upgrade
   system.autoUpgrade = {
         enable = true;
@@ -109,9 +55,6 @@
   
   # Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Scrolling fix
-  services.libinput.touchpad.naturalScrolling = true;
 
   # Xserver (contains anything X11)
   services.xserver = {
@@ -135,7 +78,7 @@
           experimental-features=['scale-monitor-framebuffer']
         '';
       };
-    };
+     };
     
     # Window managers
     windowManager = {
@@ -144,6 +87,18 @@
      dwm = {
        enable = true;
      };
+
+     # i3
+     # i3 = {
+     #   enable = true;
+     #   package = pkgs.i3-gaps;
+      #  extraPackages = with pkgs; [
+         # rofi
+         # i3status
+         # i3lock
+         # i3blocks
+      # ];
+     # };
     };
    };
  
@@ -152,6 +107,8 @@
        # Location of dwm config
        src = /home/spaceman/.suckless/dwm;
    };
+    
+
 
    # TLP for battery (laptop ONLY, will conflict wil gnome power profiles)
    # services.tlp = {
@@ -175,7 +132,7 @@
 
    # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
+    layout = "jp";
     variant = "";
   };
 
@@ -190,7 +147,7 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.libinput.touchpad.naturalScrolling = true;
 
   # Gives * when typing passwd
   security = {
@@ -246,8 +203,8 @@
     curl
     btop
     tree
+    unzip
     kitty
-    volctl
     hwinfo
     neovim
     figlet
@@ -288,25 +245,24 @@
             gnomeExtensions.top-bar-organizer
             gnomeExtensions.appindicator
             gnomeExtensions.user-avatar-in-quick-settings
-            #gnomeExtensions.open-bar # Look into at some point
 
     # Window Manager Extras
     feh # X11 Only
     dunst
     swww # Wayland Only
+    networkmanagerapplet
+    volctl
     clipman
     waypaper # Despite the name | works on both
     pywal16 # Color by wallpaper
-    imagemagick # Color gen backend
+        imagemagick # Color gen backend
     rofi # X11 Only
-    picom # X11 Only
-    networkmanagerapplet
+    picom # X11 Only 
     pcmanfm
     lxappearance
-            # GTK themes
+            # Themes
             gruvbox-dark-gtk
             gruvbox-dark-icons-gtk
-            gruvbox-gtk-theme
     betterlockscreen
 
     # Hyprland Extras
@@ -318,14 +274,14 @@
     #hyprpolkitagent
     #xdg-desktop-portal-hyprland
 
-    # Dwm Extras
+    # Dwm Extras with package overrides
     (pkgs.dmenu.overrideAttrs (oldAttrs: {
-       name = "dmenu-custom";
-       src = /home/spaceman/.suckless/dmenu;
+        name = "dmenu-custom";
+        src = /home/spaceman/.suckless/dmenu;
     }))
     (pkgs.slstatus.overrideAttrs (oldAttrs: {
-       name = "slstatus-custom";
-       src = /home/spaceman/.suckless/slstatus;
+        name = "slstatus-custom";
+        src = /home/spaceman/.suckless/slstatus;
     }))
 
     # Themeing
@@ -361,8 +317,6 @@
 
 	    # Extras/Misc
 	    mission-center
-        #xboxdrv
-     
     ];
     
  };
@@ -372,9 +326,6 @@
     enable = true;
     dockerCompat = true;
   };
-
-  #programs.java.enable = true;
-  # environment.variables.JAVA_HOME = ${pkgs.jdk23.home}/lib/openjdk;  
 
   # Main place to install fonts
   fonts.packages = with pkgs; [
@@ -388,23 +339,23 @@
 
   # Xfce
   environment.xfce.excludePackages = with pkgs.xfce; [
-   mousepad
-   parole
-   ristretto
-   xfce4-appfinder
+    mousepad
+    parole
+    ristretto
+    xfce4-appfinder
    ## xfce4-notifyd
    ## xfce4-screenshooter
    ## xfce4-session
    ## xfce4-settings
-   xfce4-taskmanager
-   xfce4-terminal 
-   thunar
+     xfce4-taskmanager
+     xfce4-terminal 
+     thunar
   ];
 
   # Gnome
   environment.gnome.excludePackages = with pkgs; [
     orca
-        #evince
+    # evince
     # file-roller
     geary
     # gnome-disk-utility
