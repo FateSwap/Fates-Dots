@@ -1,5 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
+local act = wezterm.action
 
 -- This is where you actually apply your config choices.
 return {
@@ -30,4 +31,22 @@ return {
             brights = {"#32302f","#ea6962","#a9b665","#d8a657", "#7daea3","#d3869b", "#89b482","#d4be98"},
         },
     },
+
+    --Keybinds
+    keys = {
+      -- Turn off the default CMD-m Hide action, allowing CMD-m to
+      -- be potentially recognized and handled by the tab
+    {
+      key = 'Tab',
+      mods = 'CTRL',
+      action = act.ActivateTabRelative(-1),
+    },
+    {
+    key = 'S',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+    },
+
+    },
+
 }
