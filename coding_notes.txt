@@ -42,6 +42,9 @@
         # Vim file explorer
         :Ex
 
+        # Copy all to clipboard
+        :%y+
+
         # TonyBanters repo for nvim binds
         https://github.com/tonybanters/Nvim
 
