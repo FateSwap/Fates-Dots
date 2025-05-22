@@ -191,6 +191,7 @@
     systemPackages = with pkgs; [
     
     # Terminals
+    wezterm
     ghostty
     alacritty
 
@@ -198,7 +199,6 @@
     vim 
     git
     bat
-    fzf
     wget
     curl
     btop
@@ -211,6 +211,7 @@
     figlet
     pfetch
     sysstat
+    gnumake
     tealdeer
     pciutils
     neofetch
@@ -220,12 +221,17 @@
     xorg.xbacklight
     nvtopPackages.full
 
-    # Neovim with tonybanters config
+    # Nvim config
+    fd
+    fzf
     gcc
+    luajit
+    lua-language-server
+    tree-sitter
+    ripgrep
     xclip # X11 Only I think
     wl-clipboard # Wayland Only
     nodejs
-    lua-language-server
 
     # Gnome Extras
     gnome-tweaks   
@@ -255,8 +261,9 @@
     feh # X11 Only
     dunst
     swww # Wayland Only
-    networkmanagerapplet
-    volctl
+    networkmanagerapplet # Network Applet
+    volctl # Volume Applet | should replace
+    blueman # Includes Bluetooth Applet
     waypaper # Despite the name | works on both
     pywal16 # Color by wallpaper
         imagemagick # Color gen backend
@@ -325,6 +332,7 @@
 
 	    # Extras/Misc
 	    mission-center
+        obs-studio
     ];
     
  };
