@@ -91,7 +91,7 @@ static const char *downbrightness[] = {"brightnessctl","s","5%-", NULL};
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-g", "4", "-l", "4", NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "wezterm", NULL };
 static const char *scrnlock[] = { "betterlockscreen", "-l", NULL };
 
 static const Key keys[] = {
