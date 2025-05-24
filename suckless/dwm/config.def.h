@@ -43,6 +43,7 @@ static const char *const autostart[] = {
     "waypaper", "--restore", NULL,
     "volctl", NULL,
     "nm-applet", NULL,
+    "blueman-applet", NULL,
     "slstatus", NULL,
 	NULL /* terminate */
 };
