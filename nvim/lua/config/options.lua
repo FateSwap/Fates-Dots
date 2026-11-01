@@ -1,0 +1,26 @@
+-- config/options.lua
+vim.opt.relativenumber = true
+vim.opt.number = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.autoindent = true
+vim.opt.expandtab = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.termguicolors = true
+vim.opt.background = "dark"
+vim.opt.signcolumn = "yes"
+vim.opt.cursorline = true
+vim.opt.colorcolumn = "100"
+vim.opt.clipboard = "unnamedplus"
+vim.opt.backspace = "indent,eol,start"
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.scrolloff = 8
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undofile = true
+vim.opt.undodir = "~/.vim/undodir"
+vim.opt.incsearch = true
+vim.opt.updatetime = 50
+vim.g.netrw_banner = 0
